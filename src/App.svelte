@@ -3,7 +3,7 @@
 	import Section from './Section.svelte';
 	import About from './section/About.svelte'
 	import History from './section/History.svelte';
-	import Navigator from './section/navigator.svelte';
+	import Navigator from './section/Navigator.svelte';
 	import Works from './section/Works.svelte';
 </script>
 <Bg />

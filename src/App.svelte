@@ -3,10 +3,9 @@
 	import Section from './Section.svelte';
 	import About from './section/About.svelte'
 	import History from './section/History.svelte';
+	import Navigator from './section/navigator.svelte';
 	import Works from './section/Works.svelte';
-	import SectionTitle from './SectionTitle.svelte'
 </script>
-
 <Bg />
 <main>
 	<div class="hero-placeholder"></div>
@@ -27,6 +26,7 @@
 		</div>
 	</div>
 </main>
+<Navigator />
 
 <style lang="scss">
 	main {
@@ -56,5 +56,11 @@
 	.content {
 		padding: 3rem;
 		min-height: 200vh;
+	}
+
+	@media (max-width: 639px) {
+		.content {
+			padding: 0;
+		}
 	}
 </style>

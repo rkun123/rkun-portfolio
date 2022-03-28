@@ -1,7 +1,5 @@
-<script lang="typescript">
-  import { onMount } from "svelte"
+<script lang="ts">
   import { inview } from 'svelte-inview'
-  let sectionElem: HTMLElement
   let showSection = false
   /*
   onMount(() => {
@@ -21,8 +19,7 @@
    }
  }
 </script>
-<section use:inview={{}} on:change={handleInViewChanged} class="section" bind:this={sectionElem} class:section__show={showSection}>
-  <div class="bar"></div>
+<section use:inview={{}} on:change={handleInViewChanged} class="section" class:section__show={showSection}>
   <div class="container">
     <slot></slot>
   </div>
@@ -39,14 +36,17 @@
       transform: translateY(0);
     }
   }
-  .bar {
-    border: solid 1px black;
-  }
   .section {
     min-height: 100vh;
+    padding-top: 2rem;
 
     .container {
       margin: 0 2rem;
+    }
+    @media screen and (max-width: 639px) {
+      .container {
+        margin: 0 1rem;
+      }
     }
 
     &__show {

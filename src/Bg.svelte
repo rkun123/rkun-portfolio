@@ -25,7 +25,7 @@
   <h2 >Ren Tanaka</h2>
 
   <div class="scroll-down-pict" class:scroll-down-pict__show={showScrollDownPict}>
-    <img src="array.svg">
+    <img alt="bg" src="array.svg">
   </div>
 </div>
 

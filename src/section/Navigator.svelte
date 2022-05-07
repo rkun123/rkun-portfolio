@@ -7,6 +7,8 @@ import { cubicOut } from 'svelte/easing'
     element: HTMLElement
   }[] = []
 
+  const topElement = document.querySelector('body')
+
   let scrollTop = tweened(0, {
     duration: 400,
     easing: cubicOut
@@ -54,6 +56,10 @@ import { cubicOut } from 'svelte/easing'
 </script>
 
 <div class="navigator">
+  <div
+    on:click={() => scrollTo(topElement)}
+    class="navigate"
+  >Top</div>
   { #each sections as section, idx }
     <div
       on:click={() => scrollTo(sections[idx].element)}
@@ -67,11 +73,14 @@ import { cubicOut } from 'svelte/easing'
 <style lang="scss">
   .navigator {
     position: fixed;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    background-color: #fff;
+    background: linear-gradient(#ffffff 20%, #00000000);
+    padding-bottom: 1rem;
 
     .navigate {
       margin: .6rem 0;

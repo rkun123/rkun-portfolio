@@ -38,7 +38,7 @@
   }
   .section {
     min-height: 100vh;
-    padding-top: 2rem;
+    padding-top: 4rem;
 
     .container {
       margin: 0 2rem;

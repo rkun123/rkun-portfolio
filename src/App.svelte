@@ -5,6 +5,7 @@
 	import History from './section/History.svelte';
 	import Navigator from './section/Navigator.svelte';
 	import Works from './section/Works.svelte';
+	import Links from './section/Links.svelte';
 </script>
 <Bg />
 <main>
@@ -18,6 +19,9 @@
 		</Section>
 		<Section>
 			<Works />
+		</Section>
+		<Section>
+			<Links />
 		</Section>
 	</div>
 	<div class="hero-placeholder">
